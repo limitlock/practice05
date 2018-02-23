@@ -6,7 +6,6 @@ public class MyStack {
 
 	private int top;
 	private int maxSize;
-	private String[] temp;
 
 	public MyStack(int maxSize) {
 		this.maxSize = maxSize;
@@ -23,7 +22,7 @@ public class MyStack {
 
 	}
 
-	public void resize(int capacity) {
+	private void resize(int capacity) {
 		String[] temp = new String[capacity];
 		for (int i = 0; i < top; i++) {
 			temp[i] = buffer[i];
